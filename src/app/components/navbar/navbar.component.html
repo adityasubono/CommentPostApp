@@ -1,0 +1,46 @@
+<!--<div class="container-fluid">-->
+<!--  <div class="row justify-content-center">-->
+<!--    <div class="col">-->
+<!--      <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--        <a class="navbar-brand" routerLink="">Cinta Coding</a>-->
+<!--        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--          <ul class="navbar-nav mr-auto">-->
+<!--            <li class="nav-item dropdown">-->
+<!--              <a-->
+<!--                class="nav-link dropdown-toggle"-->
+<!--                id="navbarDropdown"-->
+<!--                role="button"-->
+<!--                data-toggle="dropdown"-->
+<!--                aria-haspopup="true"-->
+<!--                aria-expanded="false"-->
+<!--              >-->
+<!--                Pengguna-->
+<!--              </a>-->
+<!--              <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                <a-->
+<!--                  class="dropdown-item"-->
+<!--                  *ngFor="let user of users"-->
+<!--                  routerLink="/user/{{ user.id }}"-->
+<!--                  ><app-user-item [user]="user"></app-user-item>-->
+<!--                </a>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--      </nav>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <p class="font-weight-bold">Cinta Coding</p>
+    <p class="font-weight-bold text-center align-content-center mt-2">Post</p>
+    <div class="d-flex">
+      <p class="font-weight-bold mr-2">Wellcome,</p>
+      <p class="font-weight-bold text-primary">
+        <a href="/dashboard/{{user.id}}/{{user.id}}">{{user.username}}</a>
+      </p>
+    </div>
+  </div>
+</nav>
+

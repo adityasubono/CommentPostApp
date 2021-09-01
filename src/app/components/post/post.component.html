@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-12" *ngFor="let post1 of pageOfPost">
+      <app-post-item [post]="post1"></app-post-item>
+    </div>
+    <jw-pagination [items]="post" (changePage)="onChangePage($event)"></jw-pagination>
+  </div>
+</div>

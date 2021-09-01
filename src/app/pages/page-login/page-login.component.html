@@ -1,0 +1,50 @@
+<div class="form-signin">
+  <h3 class=" mb-3 fw-normal text-center">Login</h3>
+  <form [formGroup]="formGroup" (ngSubmit)="retrieveUsers()">
+    <div class="form-group">
+      <input
+        type="text"
+        formControlName="username"
+        id="floatingInput"
+        class="form-control"
+        placeholder="Username"
+        [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+      />
+      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+        <div *ngIf="f.username.errors.required">Username is required</div>
+        <div *ngIf="f.username.errors.minlength">
+          Username must be at least 3 characters
+        </div>
+        <div *ngIf="f.username.errors.maxlength">
+          Username must not exceed 20 characters
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+        [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+      />
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">Password is required</div>
+        <div *ngIf="f.password.errors.minlength">
+          Password must be at least 3 characters
+        </div>
+        <div *ngIf="f.password.errors.maxlength">
+          Username must not exceed 40 characters
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit"
+              class="w-100 btn btn-lg btn-primary">Login
+      </button>
+    </div>
+  </form>
+</div>
